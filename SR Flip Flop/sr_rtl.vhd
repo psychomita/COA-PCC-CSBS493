@@ -44,11 +44,14 @@ signal temp: STD_LOGIC:='0';
 
 begin	
 	
+	Q <= temp;
+	QBar <= not temp;
+	
 	process(S,R,Clk,Reset)
 	begin
 		if (Reset = '1') then
 			temp <= '0';
-		elsif (rising_edge(clk)) then
+		elsif (rising_edge(Clk)) then
 			if (S = '0' and R = '0') then
 				temp <= temp;
 			elsif (S = '1' and R = '1') then
@@ -59,8 +62,4 @@ begin
 		end if;
 	end process;
 
-	Q <= temp;
-	QBar <= not temp;
-
 end Behavioral;
-
