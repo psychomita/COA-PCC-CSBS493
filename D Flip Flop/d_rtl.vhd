@@ -34,7 +34,7 @@ entity d_rtl is
            Reset : in  STD_LOGIC;
            Clk : in  STD_LOGIC;
            Q : out  STD_LOGIC;
-           Qbar : out  STD_LOGIC);
+           QBar : out  STD_LOGIC);
 end d_rtl;
 
 architecture Behavioral of d_rtl is
@@ -43,6 +43,9 @@ signal temp:STD_LOGIC:='0';
 
 begin
 
+	Q <= temp;
+	QBar <= not temp;
+	
 	process(D,Clk,Reset)
 	begin
 		if (Reset = '1') then
@@ -51,9 +54,5 @@ begin
 			temp <= D;
 		end if;
 	end process;
-	
-	Q <= temp;
-	QBar <= not temp;
 
 end Behavioral;
-
