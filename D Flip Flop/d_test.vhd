@@ -60,7 +60,7 @@ ARCHITECTURE behavior OF d_test IS
    signal Qbar : std_logic;
 
    -- Clock period definitions
-   constant Clk_period : time := 1 ps;
+   constant Clk_period : time := 2 ps;
  
 BEGIN
  
@@ -73,17 +73,26 @@ BEGIN
           Qbar => Qbar
         );
 
+   -- Clock process definitions
+   Clk_process :process
+   begin
+		Clk <= '0';
+		wait for Clk_period/2;
+		Clk <= '1';
+		wait for Clk_period/2;
+   end process;
+
    -- Stimulus process
    stim_proc: process
    begin		
       Reset <= '1';
-		wait for Clk_period;
+		wait for 2 ps;
 		D <= '0';
 		Reset <= '0';
-		wait for Clk_period;
+		wait for 2 ps;
 		D <= '1';
 		Reset <= '0';
-		wait for Clk_period;
+		wait for 2 ps;
    end process;
 
 END;
