@@ -44,6 +44,9 @@ signal temp: STD_LOGIC:='0';
 
 begin
 	
+	Q <= temp;
+	QBar <= not temp;	
+	
 	process(J,K,Clk,Reset)
 	begin
 		if (Reset = '1') then
@@ -59,8 +62,4 @@ begin
 		end if;
 	end process;
 
-	Q <= temp;
-	QBar <= not temp;	
-
 end Behavioral;
-
