@@ -62,7 +62,7 @@ ARCHITECTURE behavior OF jk_test IS
    signal QBar : std_logic;
 
    -- Clock period definitions
-   constant Clk_period : time := 1 ps;
+   constant Clk_period : time := 2 ps;
  
 BEGIN
  
@@ -76,27 +76,36 @@ BEGIN
           QBar => QBar
         );
 
+   -- Clock process definitions
+   Clk_process :process
+   begin
+		Clk <= '0';
+		wait for Clk_period/2;
+		Clk <= '1';
+		wait for Clk_period/2;
+   end process;
+   
    -- Stimulus process
    stim_proc: process
    begin		
       Reset <= '1';
-		wait for Clk_period;
+		wait for 2 ps;
 		J <= '0';
 		K <= '0';
 		Reset <= '0';
-		wait for Clk_period;
+		wait for 2 ps;
 		J <= '0';
 		K <= '1';
 		Reset <= '0';
-		wait for Clk_period;
+		wait for 2 ps;
 		J <= '1';
 		K <= '0';
 		Reset <= '0';
-		wait for Clk_period;
+		wait for 2 ps;
 		J <= '1';
 		K <= '1';
 		Reset <= '0';
-		wait for Clk_period;
+		wait for 2 ps;
    end process;
 
 END;
