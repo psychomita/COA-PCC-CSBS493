@@ -2,10 +2,10 @@
 -- Company: 
 -- Engineer:
 --
--- Create Date:   15:08:41 04/06/2024
+-- Create Date:   11:15:27 04/09/2024
 -- Design Name:   
--- Module Name:   /home/ise/SR_Flip_Flop/sr_test.vhd
--- Project Name:  SR_Flip_Flop
+-- Module Name:   /home/student/Desktop/13031122026- Assignment 8/SR_FlipFlop/sr_test.vhd
+-- Project Name:  sr_ff
 -- Target Device:  
 -- Tool versions:  
 -- Description:   
@@ -62,7 +62,7 @@ ARCHITECTURE behavior OF sr_test IS
    signal QBar : std_logic;
 
    -- Clock period definitions
-   constant Clk_period : time := 1 ps;
+   constant Clk_period : time := 2 ps;
  
 BEGIN
  
@@ -76,29 +76,37 @@ BEGIN
           QBar => QBar
         );
 
+   -- Clock process definitions
+   Clk_process :process
+   begin
+		Clk <= '0';
+		wait for Clk_period/2;
+		Clk <= '1';
+		wait for Clk_period/2;
+   end process;
  
 
    -- Stimulus process
    stim_proc: process
    begin		
-      Reset <= '1';
-		wait for Clk_period;
-		S <= '0';
-		R <= '0';
-		Reset <= '0';
-		wait for Clk_period;
-		S <= '0';
-		R <= '1';
-		Reset <= '0';
-		wait for Clk_period;
-		S <= '1';
-		R <= '0';
-		Reset <= '0';
-		wait for Clk_period;
-		S <= '1';
-		R <= '1';
-		Reset <= '0';
-		wait for Clk_period;
+      Reset<='1';
+		wait for 2 ps;		
+		S<='0';
+		R<='0';
+		Reset<='0';
+		wait for 2 ps;		
+		S<='0';
+		R<='1';
+		Reset<='0';
+		wait for 2 ps;		
+		S<='1';
+		R<='0';
+		Reset<='0';
+		wait for 2 ps;		
+		S<='1';
+		R<='1';
+		Reset<='0';
+		wait for 2 ps;
    end process;
 
 END;
