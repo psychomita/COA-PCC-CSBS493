@@ -11,3 +11,15 @@ This repository contains the source codes for design of various combinational an
 ```
 git clone https://github.com/psychomita/COA-PCC-CSBS493
 ```
+
+## Feedback
+
+Any suggestions and/or improvements are welcome. Please create a pull request or open an issue to submit your feedback.
+
+## Authors
+
+- [@psychomita](https://github.com/psychomita)
+  
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
