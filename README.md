@@ -5,7 +5,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/psychomita/COA-PCC-CSBS493?label=Last%20Updated)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
-This repository contains the source codes for design of various combinational and sequential circuits using logic gates and componenets written in VHDL using Xilinx (14.7), which were practiced as a part of my Computer Organization and Architecture lab during my 4th semester.
+This repository contains the source codes for design of various combinational and sequential circuits using logic gates and components written in VHDL using Xilinx (14.7), which were practiced as a part of my Computer Organization and Architecture lab during my 4th semester.
 
 ## To clone this repository, use the following command :
 ```
