@@ -19,7 +19,6 @@ Any suggestions and/or improvements are welcome. Please create a pull request or
 ## Authors
 
 - [@psychomita](https://github.com/psychomita)
+- [@uiuxarghya](https://github.com/uiuxarghya)
   
-## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
