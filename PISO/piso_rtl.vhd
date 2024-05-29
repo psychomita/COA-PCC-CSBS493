@@ -34,7 +34,7 @@ entity piso_rtl is
            Clock : in  STD_LOGIC;
            Rst : in  STD_LOGIC;
            Load : in  STD_LOGIC;
-			  Dout_vector : out  STD_LOGIC_VECTOR (3 downto 0);
+	   Dout_vector : out  STD_LOGIC_VECTOR (3 downto 0);
            Dout : out  STD_LOGIC);
 end piso_rtl;
 
